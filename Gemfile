@@ -95,3 +95,4 @@ end
   gem 'oauth'
   gem 'omniauth-facebook'
   gem "koala", "~> 1.10.0rc"
+  gem "cancancan"
