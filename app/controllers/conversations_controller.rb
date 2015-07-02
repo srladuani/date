@@ -16,7 +16,7 @@ class ConversationsController < ApplicationController
 
   def show
     user = current_user
-    @receipts = conversation.receipts_for(user).paginate(:page => params[:page], :per_page => 5)
+    @receipts = conversation.receipts_for(user).order('id ASC').paginate(:page => params[:page], :per_page => 5)
     @conversation.receipts.recipient(user).update_all(is_read: true)
     @question = Question.where(:conversation_id => @conversation.id).first
     

@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
-  before_filter :user_loged_in, :except => [:index, :new, :create]
+  before_filter :user_loged_in, :except => [:index, :new, :create, :terms_of_use, :privacy_policy, :faq]
   respond_to :html, :json
+  layout 'new_application'
   
   def age_group
   age_group_service = AgeGroupsService.new([[18, 24], [25, 34], [35, 44], [45, 100]])
