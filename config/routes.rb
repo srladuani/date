@@ -5,6 +5,9 @@ Dating::Application.routes.draw do
   mount Sidekiq::Web, at: '/sidekiq'
 
   get 'signup' => 'users#new'
+  get 'terms' => 'users#terms_of_use'
+  get 'faq' => 'users#faq'
+  get 'privacy' => 'users#privacy_policy'
   get 'login' => 'sessions#new'
   get 'logout' => 'sessions#destroy'
   get 'edit' => 'users#edit'

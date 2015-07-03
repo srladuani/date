@@ -1,0 +1,13 @@
+development:
+  mysql41: 9312
+  morphology: stem_en
+  wordforms: "lib/word.txt"
+  mem_limit: 1024M
+
+test:
+  mysql41: 9313
+production:
+  mysql41: 9312
+  quiet_deltas: true
+  mem_limit: 1024M
+  version: '2.0.6'

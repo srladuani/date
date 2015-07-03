@@ -3,7 +3,8 @@ ThinkingSphinx::Index.define :location, :with => :active_record do
   
   has "RADIANS(locations.latitude)",  :as => :latitude,  :type => :float
   has "RADIANS(locations.longitude)", :as => :longitude, :type => :float
-end 
+  group_by 'latitude', 'longitude'
+end
 
 ThinkingSphinx::Index.define :user, :with => :active_record, :delta => true do 
   indexes name, :as => :user, :sortable => true 
@@ -18,4 +19,5 @@ ThinkingSphinx::Index.define :user, :with => :active_record, :delta => true do
   has birthday
   set_property :wordforms => 'lib/word.txt'
   join location
+  group_by 'latitude', 'longitude'
 end
