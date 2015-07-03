@@ -8,8 +8,6 @@ gem 'rails', '4.0.0.rc1'
 
 gem 'mailboxer'
 gem 'paypal-recurring'
-gem 'thinking-sphinx', '3.1.0'
-gem 'mysql2', '0.3.13'
 gem 'carrierwave'
 gem 'jdbc-mysql'
 gem 'rmagick'
@@ -36,7 +34,8 @@ gem 'stripe_event'
 gem 'pg'
 gem 'puma'
 gem 'rails_12factor'
-
+gem 'thinking-sphinx', '3.1.0'
+gem 'mysql2', '0.3.13'
 
 #gem 'client_side_validations'
 
