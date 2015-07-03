@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.0.0'
+#ruby '2.0.0'
 gem 'rails', '4.0.0.rc1'
 
 # Bundle edge Rails instead:
@@ -8,6 +8,12 @@ gem 'rails', '4.0.0.rc1'
 
 gem 'mailboxer'
 gem 'paypal-recurring'
+<<<<<<< HEAD
+=======
+gem 'thinking-sphinx', '3.1.0'
+gem 'flying-sphinx',   '1.2.0'
+gem 'mysql2', '0.3.13'
+>>>>>>> 443fc035bd0b0d7803c7c865a7e1712de0bc4103
 gem 'carrierwave'
 gem 'jdbc-mysql'
 gem 'rmagick'
@@ -94,3 +100,5 @@ end
   gem 'oauth'
   gem 'omniauth-facebook'
   gem "koala", "~> 1.10.0rc"
+  gem "cancancan"
+  gem "non-stupid-digest-assets"
