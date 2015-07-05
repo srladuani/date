@@ -15,7 +15,7 @@ module ApplicationHelper
   	timestamp.strftime("%I:%M%p")
   end
   def random_background
-    image_list = ["search_background1.png", "search_background2.png"]
+    image_list = ["search_background1.jpg", "search_background.jpg", "sbg.jpg", "sbg.jpg", "sbg1.jpg", "sbg2.jpg", "sbg3.jpg", "sbg4.jpg", "sbg5.jpg", "sbg6.jpg", "sbg7.jpg", "sbg8.jpg", "sbg9.jpg", "sbg10.jpg", "sbg11.jpg", "sbg12.jpg" ]
     "background: url('/assets/#{image_list.shuffle[0]}') no-repeat scroll 0% 0% transparent;"
   end
   def unread_messages(user)
