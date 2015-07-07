@@ -1,5 +1,14 @@
 <%= @user.username %>,
 
-Thank you for registering!
+<p>We're delighted to welcome you to AreYouTaken—the  dating site that encourages you to get offline on real dates, in the real world.
+</p>
 
-Edit profile: <%= edit_user_url(@user) %>
+The first step to getting offline dates would be to update your profile by visiting <%= link_to "Edit profile", user_url(@user) %>.</p>
+
+Then post a date idea. Start with the words "Let's Go..." and describe the date you would like to go on.<P>
+	
+Browse our members and connect with the people you like by sending a message, liking their picture, playing speed date or responding to their date idea.
+
+The last step is to get offline!
+
+Start dating offline at <%= link_to "AreYouTaken", root_path %>.
