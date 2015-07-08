@@ -97,3 +97,5 @@ end
   gem "koala", "~> 1.10.0rc"
   gem "cancancan"
   gem "non-stupid-digest-assets"
+  gem 'carrierwave-aws'
+  gem 'carrierwave-imageoptimizer'

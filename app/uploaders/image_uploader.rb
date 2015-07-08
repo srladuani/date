@@ -4,6 +4,7 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
+  include CarrierWave::ImageOptimizer
   include CarrierWave::MiniMagick
 
   # Include the Sprockets helpers for Rails 3.1+ asset pipeline compatibility:
@@ -12,7 +13,7 @@ class ImageUploader < CarrierWave::Uploader::Base
 
 
   # Choose what kind of storage to use for this uploader:
-  storage :file
+  storage :aws
   # storage :fog
 
   # Override the directory where uploaded files will be stored.
@@ -32,6 +33,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   # Process files as they are uploaded:
   #process :scale => [200, 300]
   process :auto_orient
+  process optimize: [{ quality: 60 }]
 
   #
   # def scale(width, height)
