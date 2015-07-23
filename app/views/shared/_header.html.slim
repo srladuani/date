@@ -3,7 +3,7 @@
   #header style="height: 30px;"
     .wrapper
       .login_sec
-        .main_dropdown style="float: right;width: 35%;"
+        .main_dropdown style="float: right;width: 45%;"
           a href="" style="float:right;"
             - if current_user.avatar.present?
 			    =image_tag "#{current_user.avatar.try(:image_url,:avatar)}", :class => "header_avatar"
@@ -35,7 +35,7 @@
 			li role="presentation"
 			  a role="menuitem" tabindex="-1" href="/logout"
 				'Logout
-        .col.col2 style="padding-left: 35%;"
+        .col.col2 style="padding-left: 25%;"
           a href="/conversations"
             =image_tag "login_icon2.png"
             span Messages
