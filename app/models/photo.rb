@@ -4,6 +4,9 @@ class Photo < ActiveRecord::Base
   has_many :gallery_users, :through => :gallery, :source => :user
   belongs_to :user
   mount_uploader :image, ImageUploader
+  process_in_background :image
+  store_in_background :image
+  
   
   LIMIT = 5
 
