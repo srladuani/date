@@ -71,8 +71,14 @@ class User < ActiveRecord::Base
   before_save :set_age
   
   def similar
-    arr = User.where(:gender => self.gender).where.not(:id => self.id)
-    arr.select{|c| c.location.state == self.location.state }
+      arr = User.where(:gender => self.gender).where.not(:id => self.id)
+      arr.select{ |c|
+          if !c.location.nil? 
+              return c.location.state == self.location.state
+          else
+              return false
+          end
+      }
   end
   
   def latitude
