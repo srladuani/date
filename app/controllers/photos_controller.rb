@@ -65,10 +65,8 @@ class PhotosController < ApplicationController
         redirect_to :back, notice: "Set as avatar!"
       end
       
-      private
-
-
-      def photo_params
-        params.require(:photo).permit(:name, :attachment)
+            def photo_params
+              params.require(:photo).permit(:name, :attachment)
+            end
       end
 end
