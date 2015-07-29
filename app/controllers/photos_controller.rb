@@ -9,7 +9,7 @@ class PhotosController < ApplicationController
   end
 
   def create
-    @photo = Photo.create(params[:photo])
+    @photo = Photo.create(photo_params)
     @photo.user = current_user
     if @photo.valid? and @photo.save!
       flash[:notice] = "Successfully created photos."
@@ -63,5 +63,12 @@ class PhotosController < ApplicationController
           flash[:notice] = "Avatar failed"
         end
         redirect_to :back, notice: "Set as avatar!"
+      end
+      
+      private
+
+
+      def photo_params
+        params.require(:photo).permit(:name, :attachment)
       end
 end
