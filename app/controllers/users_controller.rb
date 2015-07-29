@@ -80,12 +80,6 @@ end
     @question = @user.questions.where("answer is not null").order("created_at DESC").page(params[:page]).per_page(3)
     @letsgos = @user.letsgos.paginate(page: params[:page], :per_page => 3)
     @letsgo = current_user.letsgos.build
-    @similar_users = @user.similar.shuffle.first(8)
-    respond_to do |format|
-      format.html { render layout: 'new_application' }
-      format.js { render partial: '/letsgos/letsgo_paging', locals: {letsgos: @letsgos} } if params[:letsgo]
-      format.js { render partial: 'questions/questions', locals: {questions: @question} }
-    end
   end
     
   def edit
