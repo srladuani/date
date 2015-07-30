@@ -74,7 +74,7 @@ class User < ActiveRecord::Base
       arr = User.where(:gender => self.gender).where.not(:id => self.id)
       arr.select{ |c|
           if !c.location.nil? 
-              return c.location.state == self.location.state
+              return c.location.state == self.location.try(:state)
           else
               return false
           end
